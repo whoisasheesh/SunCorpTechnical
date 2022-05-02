@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SuncorpTechnicalChallenge</string>
+    <string name="astronaut_thumbnail">Astronaut Thumbnail</string>
+    <string name="astronaut_name">Astronaut Name</string>
+    <string name="astronaut_nationality">Astronaut Nationality</string>
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>

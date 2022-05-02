@@ -1,190 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <RelativeLayout
+        android:id="@+id/item_astronaut"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
+        android:layout_height="88dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_rectangle"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_transparent_style"
-        android:paddingStart="6dp"
-        android:paddingTop="6dp"
-        android:paddingEnd="6dp"
-        android:paddingBottom="6dp">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <ImageView
-            android:id="@+id/iv_property_thumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:contentDescription="property_img"
-            android:scaleType="centerCrop" />
+            android:id="@+id/iv_astronaut_thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/astronaut_thumbnail"
+            android:maxWidth="80dp"
+            android:minHeight="72dp"
+            android:src="@mipmap/ic_launcher_round" />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/iv_property_thumbnail"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/iv_astronaut_thumbnail"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-            <LinearLayout
-                android:id="@+id/l1_property_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/l1_agent_holder"
-                android:gravity="start"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_astronaut_name"
+                style="@style/TextViewStyle"
+                android:contentDescription="@string/astronaut_name"
+                android:text="@string/astronaut_name" />
 
-                <TextView
-                    android:id="@+id/tv_property_status"
-                    style="@style/TextViewStyle"
-                    android:layout_below="@+id/iv_property_thumbnail"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="6dp"
-                    android:background="@drawable/bg_style"
-                    android:paddingStart="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="4dp"
-                    android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_astronaut_nationality"
+                style="@style/TextViewStyle"
+                android:contentDescription="@string/astronaut_nationality"
+                android:text="@string/astronaut_nationality" />
 
-                <TextView
-                    android:id="@+id/tv_address"
-                    style="@style/TextViewStyle"
-                    android:layout_below="@+id/iv_property_thumbnail"
-                    android:text=""
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/normalTextSize" />
+            <TextView
+                android:id="@+id/tv_astronaut_dob"
+                style="@style/TextViewStyle"
+                android:contentDescription="@string/date_of_birth"
+                android:text="@string/date_of_birth" />
 
-                <TextView
-                    android:id="@+id/tv_suburb_postcode"
-                    style="@style/TextViewStyle"
-                    android:layout_below="@+id/iv_property_thumbnail"
-                    android:text=""
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/normalTextSize" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/astronaut_thumbnail"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
-                    <LinearLayout
-                        android:id="@+id/l1_bedroom_icon_holder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_bedroom_count"
-                            style="@style/TextViewStyle"
-                            android:text="5"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/smallTextSize" />
-
-                        <ImageView
-                            android:id="@+id/iv_bed_icon"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_marginStart="4dp"
-                            android:src="@drawable/ic_bedroom" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/l1_bathroom_icon_holder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/smallMargin"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_bathroom_count"
-                            style="@style/TextViewStyle"
-                            android:text="5"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/smallTextSize" />
-
-                        <ImageView
-                            android:id="@+id/iv_bath_icon"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_marginStart="4dp"
-                            android:src="@drawable/ic_bathtub" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/l1_carspace_icon_holder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/smallMargin"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_carspace_count"
-                            style="@style/TextViewStyle"
-                            android:text="5"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/smallTextSize" />
-
-                        <ImageView
-                            android:id="@+id/iv_car_icon"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_marginStart="4dp"
-                            android:src="@drawable/ic_car" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l1_agent_holder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_agent_icon"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:layout_marginTop="2dp"
-                    app:civ_border_color="#ffffff"
-                    app:civ_border_width="0.4dp" />
-
-                <TextView
-                    android:id="@+id/tv_agent_name"
-                    style="@style/TextViewStyle"
-                    android:letterSpacing="-0.07"
-                    android:text=""
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/smallTextSize" />
-
-
-            </LinearLayout>
-        </RelativeLayout>
 
     </RelativeLayout>
 </layout>
