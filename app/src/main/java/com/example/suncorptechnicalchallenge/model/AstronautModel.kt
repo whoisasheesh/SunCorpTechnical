@@ -5,23 +5,31 @@ import android.os.Parcelable
 import android.os.Parcelable.Creator
 
 class AstronautModel : Parcelable {
-    private var astronautId: String?
-    private var astronautName: String?
-    private var astronautNationality: String?
-    private var astronautThumbnail: String?
-    private var astronautDob: String?
-    private var astronautBio:String?
+    var astronautId: String?
+    var astronautName: String?
+    var astronautNationality: String?
+    var astronautThumbnail: String?
+    var astronautDob: String?
+    var astronautBio: String?
+    var astronautProfileIcon: String?
 
 
     constructor(
-        astronautId: String, astronautName: String, astronautNationality: String, astronautThumbnail: String,
-        astronautDob: String, astronautBio: String){
+        astronautId: String,
+        astronautName: String,
+        astronautNationality: String,
+        astronautThumbnail: String,
+        astronautDob: String,
+        astronautBio: String,
+        astronautProfileIcon:String
+    ) {
         this.astronautId = astronautId
         this.astronautName = astronautName
         this.astronautNationality = astronautNationality
         this.astronautThumbnail = astronautThumbnail
         this.astronautDob = astronautDob
         this.astronautBio = astronautBio
+        this.astronautProfileIcon = astronautProfileIcon
     }
 
     private constructor(`in`: Parcel) {
@@ -31,6 +39,7 @@ class AstronautModel : Parcelable {
         astronautThumbnail = `in`.readString()
         astronautDob = `in`.readString()
         astronautBio = `in`.readString()
+        astronautProfileIcon = `in`.readString()
     }
 
     override fun describeContents(): Int {
@@ -44,6 +53,7 @@ class AstronautModel : Parcelable {
         dest.writeString(astronautThumbnail)
         dest.writeString(astronautDob)
         dest.writeString(astronautBio)
+        dest.writeString(astronautProfileIcon)
     }
 
     companion object {

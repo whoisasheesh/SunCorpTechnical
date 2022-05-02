@@ -3,10 +3,13 @@ package com.example.suncorptechnicalchallenge.adaptar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.suncorptechnicalchallenge.R
 import com.example.suncorptechnicalchallenge.databinding.ItemAstronautBinding
 import com.example.suncorptechnicalchallenge.model.AstronautModel
 import com.example.suncorptechnicaltest.interfaces.RecyclerViewItemClickListener
+import com.squareup.picasso.Picasso
 import java.util.ArrayList
 
 class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
@@ -14,11 +17,25 @@ class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
     private var itemClickListener: RecyclerViewItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AstronautAdapter.ViewHolder {
-        TODO("Not yet implemented")
+        return ViewHolder(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.item_astronaut,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: AstronautAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val astronautModel = astronautLists[position]
+        holder.binding.tvAstronautName.text = astronautModel.astronautName
+        holder.binding.tvAstronautNationality.text = astronautModel.astronautNationality
+        holder.binding.tvAstronautDob.text = astronautModel.astronautDob
+
+        Picasso.get().load(astronautModel.astronautThumbnail)
+            .error(R.drawable.ic_image_not_available)
+            .into(holder.binding.ivAstronautThumbnail)
     }
 
     override fun getItemCount(): Int {

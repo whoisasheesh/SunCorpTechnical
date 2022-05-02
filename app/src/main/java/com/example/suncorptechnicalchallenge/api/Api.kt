@@ -22,7 +22,7 @@ class Api {
                 return field
             }
             private set
-        const val apiAstronaut = "astronaut/"
+        const val apiAstronaut = "astronaut"
         const val apiAstronautDetail = "1" //send astronaut id here
     }
 }
