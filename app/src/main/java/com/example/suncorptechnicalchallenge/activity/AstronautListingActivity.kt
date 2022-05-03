@@ -125,7 +125,7 @@ class AstronautListingActivity : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .create()
         alert.setTitle("Exit Application")
-        alert.setMessage("Are you sure you want to exit?")
+        alert.setMessage("Are you sure you want to exit application?")
         alert.setIcon(R.drawable.ic_warning)
         alert.setCancelable(false)
         alert.setCanceledOnTouchOutside(false)
