@@ -21,7 +21,7 @@ class AstronautModel : Parcelable {
         astronautThumbnail: String,
         astronautDob: String,
         astronautBio: String,
-        astronautProfileIcon:String
+        astronautProfileIcon: String
     ) {
         this.astronautId = astronautId
         this.astronautName = astronautName

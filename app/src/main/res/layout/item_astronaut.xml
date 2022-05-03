@@ -4,7 +4,7 @@
     <RelativeLayout
         android:id="@+id/item_astronaut"
         android:layout_width="match_parent"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/iv_astronaut_profile_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
             android:contentDescription="@string/astronaut_thumbnail"
             android:maxWidth="80dp"
             android:minHeight="72dp"
@@ -26,8 +26,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="12dp"
             android:layout_toEndOf="@id/iv_astronaut_profile_icon"
             android:orientation="vertical"
             android:padding="8dp">

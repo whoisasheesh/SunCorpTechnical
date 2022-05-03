@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.example.suncorptechnicalchallenge.R
 import com.example.suncorptechnicalchallenge.databinding.ItemAstronautBinding
 import com.example.suncorptechnicalchallenge.model.AstronautModel
 import com.example.suncorptechnicaltest.interfaces.RecyclerViewItemClickListener
 import com.squareup.picasso.Picasso
+
 
 class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
     RecyclerView.Adapter<AstronautAdapter.ViewHolder>() {
@@ -48,6 +50,11 @@ class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
         this.itemClickListener = clickListener
     }
 
+    fun updateData(astronautLists: ArrayList<AstronautModel?>?) {
+        astronautLists?.clear()
+        astronautLists?.addAll(astronautLists)
+    }
+
     inner class ViewHolder(var binding: ItemAstronautBinding) :
         RecyclerView.ViewHolder(
             binding.root
@@ -65,3 +72,5 @@ class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
         }
     }
 }
+
+
