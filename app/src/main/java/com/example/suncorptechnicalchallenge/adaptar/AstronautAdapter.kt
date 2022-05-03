@@ -1,5 +1,6 @@
 package com.example.suncorptechnicalchallenge.adaptar
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,6 @@ import com.example.suncorptechnicalchallenge.databinding.ItemAstronautBinding
 import com.example.suncorptechnicalchallenge.model.AstronautModel
 import com.example.suncorptechnicaltest.interfaces.RecyclerViewItemClickListener
 import com.squareup.picasso.Picasso
-import java.util.ArrayList
 
 class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
     RecyclerView.Adapter<AstronautAdapter.ViewHolder>() {
@@ -27,15 +27,17 @@ class AstronautAdapter(private val astronautLists: ArrayList<AstronautModel>) :
         )
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: AstronautAdapter.ViewHolder, position: Int) {
         val astronautModel = astronautLists[position]
-        holder.binding.tvAstronautName.text = astronautModel.astronautName
-        holder.binding.tvAstronautNationality.text = astronautModel.astronautNationality
-        holder.binding.tvAstronautDob.text = astronautModel.astronautDob
+        holder.binding.tvAstronautName.text = "Astronaut Name: " + astronautModel.astronautName
+        holder.binding.tvAstronautNationality.text =
+            "Nationality: " + astronautModel.astronautNationality
+        holder.binding.tvAstronautDob.text = "Date of birth: " + astronautModel.astronautDob
 
         Picasso.get().load(astronautModel.astronautThumbnail)
             .error(R.drawable.ic_image_not_available)
-            .into(holder.binding.ivAstronautThumbnail)
+            .into(holder.binding.ivAstronautProfileIcon)
     }
 
     override fun getItemCount(): Int {

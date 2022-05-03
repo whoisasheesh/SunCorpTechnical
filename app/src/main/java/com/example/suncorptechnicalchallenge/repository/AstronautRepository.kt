@@ -2,6 +2,7 @@ package com.example.suncorptechnicalchallenge.repository
 
 import android.util.Log
 import com.example.suncorptechnicalchallenge.api.Api
+import com.example.suncorptechnicalchallenge.interfaces.OnComplete
 import com.example.suncorptechnicalchallenge.model.AstronautModel
 import okhttp3.ResponseBody
 import org.json.JSONException
@@ -65,10 +66,6 @@ class AstronautRepository {
             }
 
         })
-    }
-
-    interface OnComplete {
-        fun onComplete(isSuccess: Boolean, astronautModelArrayList: ArrayList<AstronautModel>)
     }
 
     companion object {

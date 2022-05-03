@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.suncorptechnicalchallenge.model.AstronautModel
 import com.example.suncorptechnicalchallenge.repository.AstronautRepository
-import com.example.suncorptechnicalchallenge.repository.AstronautRepository.OnComplete
 import kotlin.collections.ArrayList
+import com.example.suncorptechnicalchallenge.interfaces.OnComplete
 
 class AstronautListingViewModel : ViewModel() {
     private var mAstronautLists: MutableLiveData<ArrayList<AstronautModel>>? = MutableLiveData()

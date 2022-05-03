@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/drawable/bg_rectangle.xml" value="0.1585" />
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.1585" />
+        <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1585" />
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/layout/activity_astronaut_detail.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/layout/activity_astronaut_details.xml" value="0.13414634146341464" />
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/layout/activity_astronaut_listing.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/layout/item_astronaut.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ashis/AndroidStudioProjects/SuncorpTechnicalChallenge/app/src/main/res/layout/item_property_list.xml" value="0.22826086956521738" />

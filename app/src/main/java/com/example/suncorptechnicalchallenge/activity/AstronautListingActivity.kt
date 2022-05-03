@@ -22,6 +22,9 @@ class AstronautListingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_astronaut_listing)
+        binding?.toolbar?.title = "Available Astronauts"
+        binding?.toolbar?.navigationIcon = null
+
         astronautListingViewModel = ViewModelProvider(this).get(
             AstronautListingViewModel::class.java
         )
