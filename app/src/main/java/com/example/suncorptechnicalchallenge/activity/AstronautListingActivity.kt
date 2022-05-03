@@ -138,9 +138,5 @@ class AstronautListingActivity : AppCompatActivity() {
         alert.setOnCancelListener { }
         alert.show()
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 }
 
